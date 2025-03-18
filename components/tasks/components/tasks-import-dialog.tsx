@@ -49,7 +49,7 @@ export function TasksImportDialog({ open, onOpenChange }: Props) {
   const fileRef = form.register("file");
 
   const onSubmit = () => {
-    const file = form.getValues("file");
+    const file = form.getValues("file") as File[];
 
     if (file && file[0]) {
       const fileDetails = {
